@@ -1,0 +1,356 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base.master.cs" Inherits="ExCatalogoFinal_joaoLeigo.Base" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Loja do Zé</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+   
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: -1px;
+    font-family: "Bahnschrift SemiBold";
+}
+
+img.banner {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+img.banner2 {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+img.banner3 {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box
+}
+
+.slideshow-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: auto;
+    height: auto;
+   
+}
+.mySlides {
+    display: none;
+}
+#btnSearch {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #0B1D2F;
+}
+
+    .navbar a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    a.icon {
+        display: none;
+    }
+    a.nome {
+        display: none;
+        margin-left: 50px;
+    }
+    .geeks #menus {
+            display: block;
+            }
+        #menus a:hover {
+            border-color: #0098DA;
+            box-shadow: 0 0.5em 0.5em -0.4em #0098DA;
+            transform: translateY(-0.25em);
+            cursor: pointer;
+        }
+        .social :hover {
+            border-color: #0098DA;
+            box-shadow: 0 0.1em 0.1em -0.2em #0098DA;
+            transform: translateY(-0.25em);
+            cursor: pointer;
+        }
+.footer {
+    font-size: 1.2vw;
+    font-weight: bold;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #0B1D2F;
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+        img.logo {
+            float: right;
+            height: 30px;
+            margin-top: -30px;
+        }
+        .social {
+            display: flex;
+            justify-content: center;
+            height: 30px;
+            margin-top: -25px;
+            padding: 14px 16px;
+            color:white;
+        }
+        @media all and (max-width: 1200px) {
+            .social {
+                height: 27px;
+                margin-top: -25px;
+            }
+            img.logo {
+                height: 27px;
+                margin-top: -25px;
+            }
+            img.banner {
+                display: none;
+                width: 100%;
+                height: auto;
+            }
+
+            img.banner2 {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            img.banner3 {
+                display: none;
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media all and (max-width: 800px) {
+            .social {
+                height: 25px;
+                margin-top: -22px;
+            }
+
+            img.logo {
+                height: 25px;
+                margin-top: -22px;
+            }
+            div.search {
+                margin-top:10px;
+            }
+            .navbar a {
+                padding: 8px 8px;
+                font-display:auto;
+            }
+        }
+        @media all and (max-width: 600px) {
+            .social {
+                height: 22px;
+                margin-top: -17px;
+            }
+            img.logo {
+                height: 22px;
+                margin-top: -17px;
+            }
+            img.banner {
+                display: none;
+                width: 100%;
+                height: auto;
+            }
+
+            img.banner2 {
+                display: none;
+                width: 100%;
+                height: auto;
+            }
+
+            img.banner3 {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .navbar {
+                max-width: 600px;
+                margin: auto;
+                color: white;
+
+            }
+            .geeks {
+            overflow: hidden;
+            background-color: #0B1D2F;
+            position: relative;
+            display:block;
+            }
+            .geeks #menus {
+            display: none;
+            max-width: 160px;
+            height: 200px;
+            }
+            .geeks a {
+                text-decoration: none;
+                color: white;
+                padding: 14px 16px;
+                font-size: 17px;
+                display: block;
+                
+            }
+            .geeks a.icon {
+                color: #0B1D2F;
+                background-color:white;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .search {
+                margin-top:25px;
+            }
+        }
+        .search {
+            float:right;
+            margin-right: 20px;
+            margin-top:15px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+ <header class="header">
+        <div class="navbar">
+            <div class="geeks">
+                <a class="nome">Loja do Zé</a>
+            <div id="menus">
+    <a href="default.aspx">Home</a>
+    <a href="produtos.aspx">Produtos</a>
+    <a href="inserir.aspx">Novo Produto</a>
+    <a href="contactos.aspx">Contactos</a>
+                </div>
+            <a href="javascript:void(0);" class="icon"
+               onclick="mobMenu()">
+               <i onclick="myFunction(this)"
+                        class="fa fa-bars">
+               </i>
+            </a>
+            <div class="search">
+            <asp:TextBox runat="server" ID="txtSearch" placeholder="Search" />
+            <button runat="server" id="btnRun" class="btn" title="Search">
+    <i class="fa fa-search"></i>
+</button>
+                </div>
+                </div>
+  
+</div>
+
+           <div>
+               <img class="banner" src="bannersElectronica/SiteBanner.jpg" alt='image' />
+               <img class="banner2" src="bannersElectronica/SiteBannerMob.jpg" alt='image' />
+               <img class="banner3" src="bannersElectronica/SiteBannerMobPeq.jpg" alt='image' />
+</div>
+      
+    
+
+</header>
+       
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+         
+                   
+            </asp:ContentPlaceHolder>
+               
+    </form>
+    
+    <section class="footer">
+
+        <div class="credit"> Criado por <span> João Leigo</span> | Não há cá direitos reservados! </div>
+        <div class="social"><a href="https://www.facebook.com/" class="social"><i class="fa fa-facebook-square"></i></a><a href="https://www.youtube.com/" class="social"><i class="fa fa-youtube"></i></a><a href="https://www.instagram.com/" class="social"><i class="fa fa-instagram"></i></a></div>
+        <img class="logo" src="bannersElectronica/Logo.png" />
+
+</section>
+ <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+ <script src="js/JavaScript.js" charset="utf-8"></script>
+    <script>
+
+        // Function to toggle the bar
+        function mobMenu() {
+            var bar = document.getElementById("menus");
+            if (bar.style.display === "block") {
+                bar.style.display = "none";
+            } else {
+                bar.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
